@@ -21,7 +21,7 @@ import '../styles/global.css';
       </div>
 
       <!-- Desktop CTA -->
-      <a href="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00" class="hidden md:block bg-accent text-white px-4 py-2 rounded-lg font-semibold hover:bg-orange-500 transition shadow-lg">
+      <a href="#contact" class="hidden md:block bg-accent text-white px-4 py-2 rounded-lg font-semibold hover:bg-orange-500 transition shadow-lg">
         Sign Up
       </a>
 
@@ -42,7 +42,7 @@ import '../styles/global.css';
           <a href="#pricing" class="mobile-link py-2 px-4 rounded-lg hover:bg-white/10 transition">Pricing</a>
           <a href="#about" class="mobile-link py-2 px-4 rounded-lg hover:bg-white/10 transition">About</a>
           <a href="#contact" class="mobile-link py-2 px-4 rounded-lg hover:bg-white/10 transition">Contact</a>
-          <a href="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00" class="mobile-link bg-accent text-white py-3 px-4 rounded-lg font-semibold text-center hover:bg-orange-500 transition">
+          <a href="#contact" class="mobile-link bg-accent text-white py-3 px-4 rounded-lg font-semibold text-center hover:bg-orange-500 transition">
             Sign Up - $25/mo
           </a>
         </div>
@@ -63,7 +63,7 @@ import '../styles/global.css';
           <span class="text-secondary font-bold">Just $25/month.</span>
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00" class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-500 transition shadow-lg">
+          <a href="#contact" class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-500 transition shadow-lg">
             Sign Up Now
           </a>
           <a href="#how-it-works" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition">
@@ -176,7 +176,7 @@ import '../styles/global.css';
           </li>
         </ul>
 
-        <a href="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00" class="block w-full bg-accent text-white py-4 rounded-lg text-lg font-semibold hover:bg-orange-500 transition shadow-lg">
+        <a href="#contact" class="block w-full bg-accent text-white py-4 rounded-lg text-lg font-semibold hover:bg-orange-500 transition shadow-lg">
           Sign Up Now - $25/month
         </a>
       </div>
@@ -255,66 +255,145 @@ import '../styles/global.css';
 
   <!-- Sign Up / Payment -->
   <section id="contact" class="py-20 bg-primary text-white">
-    <div class="container mx-auto px-4 text-center">
-      <img src="/favicon.svg" alt="Mascot" class="w-16 h-16 mx-auto mb-6 drop-shadow-lg" />
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Ditch Trash Day?</h2>
-      <p class="text-xl text-gray-200 mb-8">Sign up and pay securely with Stripe. Cancel anytime.</p>
-
-      <!-- Primary: Stripe Payment Button -->
-      <div class="max-w-md mx-auto mb-8">
-        <a
-          href="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00"
-          class="block w-full bg-accent text-white py-5 px-8 rounded-xl text-xl font-bold hover:bg-orange-500 transition shadow-lg"
-        >
-          Subscribe Now - $25/month
-        </a>
-        <p class="text-sm text-gray-300 mt-3">Secure payment via Stripe. Cancel anytime from your account.</p>
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-8">
+        <img src="/favicon.svg" alt="Mascot" class="w-16 h-16 mx-auto mb-6 drop-shadow-lg" />
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Ditch Trash Day?</h2>
+        <p class="text-xl text-gray-200">Fill out the form below, then complete payment. Just $25/month!</p>
       </div>
 
-      <!-- Divider -->
-      <div class="max-w-md mx-auto flex items-center gap-4 mb-8">
-        <div class="flex-1 h-px bg-white/30"></div>
-        <span class="text-gray-300 text-sm">or have questions?</span>
-        <div class="flex-1 h-px bg-white/30"></div>
-      </div>
+      <!-- Signup Form -->
+      <div class="max-w-lg mx-auto bg-background rounded-2xl p-6 md:p-8 shadow-xl">
+        <form name="signup" method="POST" data-netlify="true" action="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00" class="space-y-4">
+          <input type="hidden" name="form-name" value="signup" />
 
-      <!-- Secondary: Contact Form -->
-      <div class="max-w-md mx-auto bg-background rounded-2xl p-6 shadow-xl">
-        <h3 class="text-text-primary font-semibold mb-4">Send us a message</h3>
-        <form name="contact" method="POST" data-netlify="true" class="space-y-3">
-          <input type="hidden" name="form-name" value="contact" />
+          <!-- Contact Info -->
+          <div>
+            <label class="block text-text-primary font-semibold mb-2">Your Info</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+                class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                required
+                class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
+              />
+            </div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+              class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition mt-3"
+            />
+          </div>
 
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-            class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
-          />
+          <!-- Address -->
+          <div>
+            <label class="block text-text-primary font-semibold mb-2">Service Address</label>
+            <input
+              type="text"
+              name="address"
+              placeholder="Street Address"
+              required
+              class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
+            />
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-3">
+              <input
+                type="text"
+                name="city"
+                placeholder="City"
+                value="Paso Robles"
+                required
+                class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
+              />
+              <input
+                type="text"
+                name="state"
+                placeholder="State"
+                value="CA"
+                required
+                class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
+              />
+              <input
+                type="text"
+                name="zip"
+                placeholder="ZIP"
+                value="93446"
+                required
+                class="col-span-2 sm:col-span-1 w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
+              />
+            </div>
+          </div>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            required
-            class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
-          />
+          <!-- Can Location -->
+          <div>
+            <label class="block text-text-primary font-semibold mb-2">Where are your bins located?</label>
+            <select
+              name="bin_location"
+              required
+              class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition bg-white"
+            >
+              <option value="">Select location...</option>
+              <option value="side_yard">Side yard</option>
+              <option value="backyard">Backyard</option>
+              <option value="garage">Garage</option>
+              <option value="driveway">Driveway</option>
+              <option value="front_yard">Front yard</option>
+              <option value="other">Other (describe below)</option>
+            </select>
+          </div>
 
-          <textarea
-            name="message"
-            placeholder="Your question or message"
-            rows="3"
-            required
-            class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
-          ></textarea>
+          <!-- Trash Day -->
+          <div>
+            <label class="block text-text-primary font-semibold mb-2">What day is your trash collected?</label>
+            <select
+              name="trash_day"
+              required
+              class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition bg-white"
+            >
+              <option value="">Select day...</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="not_sure">Not sure - please help me find out</option>
+            </select>
+          </div>
 
+          <!-- Additional Notes -->
+          <div>
+            <label class="block text-text-primary font-semibold mb-2">Anything else we should know?</label>
+            <textarea
+              name="notes"
+              placeholder="Gate code, special instructions, etc. (optional)"
+              rows="2"
+              class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
           <button
             type="submit"
-            class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 transition"
+            class="w-full bg-accent text-white py-4 rounded-lg text-lg font-bold hover:bg-orange-500 transition shadow-lg mt-2"
           >
-            Send Message
+            Continue to Payment - $25/month
           </button>
+          <p class="text-text-secondary text-center text-sm">Secure payment via Stripe. Cancel anytime.</p>
         </form>
+      </div>
+
+      <!-- Questions -->
+      <div class="text-center mt-8">
+        <p class="text-gray-200">Have questions? Email <a href="mailto:luke@pasocanrunners.com" class="underline font-semibold">luke@pasocanrunners.com</a></p>
       </div>
     </div>
   </section>
