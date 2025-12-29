@@ -21,8 +21,8 @@ import '../styles/global.css';
       </div>
 
       <!-- Desktop CTA -->
-      <a href="#contact" class="hidden md:block bg-accent text-white px-4 py-2 rounded-lg font-semibold hover:bg-orange-500 transition shadow-lg">
-        Get Started
+      <a href="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00" class="hidden md:block bg-accent text-white px-4 py-2 rounded-lg font-semibold hover:bg-orange-500 transition shadow-lg">
+        Sign Up
       </a>
 
       <!-- Mobile hamburger button -->
@@ -42,8 +42,8 @@ import '../styles/global.css';
           <a href="#pricing" class="mobile-link py-2 px-4 rounded-lg hover:bg-white/10 transition">Pricing</a>
           <a href="#about" class="mobile-link py-2 px-4 rounded-lg hover:bg-white/10 transition">About</a>
           <a href="#contact" class="mobile-link py-2 px-4 rounded-lg hover:bg-white/10 transition">Contact</a>
-          <a href="#contact" class="mobile-link bg-accent text-white py-3 px-4 rounded-lg font-semibold text-center hover:bg-orange-500 transition">
-            Get Started
+          <a href="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00" class="mobile-link bg-accent text-white py-3 px-4 rounded-lg font-semibold text-center hover:bg-orange-500 transition">
+            Sign Up - $25/mo
           </a>
         </div>
       </div>
@@ -62,8 +62,8 @@ import '../styles/global.css';
           Rain or shine. Every week. <span class="text-secondary font-bold">Just $25/month.</span>
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#contact" class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-500 transition shadow-lg">
-            Start Your Free Trial
+          <a href="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00" class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-500 transition shadow-lg">
+            Sign Up Now
           </a>
           <a href="#how-it-works" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition">
             Learn More
@@ -145,7 +145,7 @@ import '../styles/global.css';
   <section id="pricing" class="py-20 bg-background-alt">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Simple Pricing</h2>
-      <p class="text-xl text-text-secondary mb-12">No contracts. Cancel anytime. Start with a 2-week free trial.</p>
+      <p class="text-xl text-text-secondary mb-12">No contracts. Cancel anytime.</p>
 
       <div class="max-w-sm mx-auto bg-background rounded-2xl shadow-xl p-8 border-2 border-primary relative overflow-hidden">
         <!-- Popular badge -->
@@ -173,17 +173,11 @@ import '../styles/global.css';
             <span class="text-primary mr-3 text-xl">✓</span>
             <span>Cancel anytime</span>
           </li>
-          <li class="flex items-center">
-            <span class="text-primary mr-3 text-xl">✓</span>
-            <span><strong>2-week free trial</strong></span>
-          </li>
         </ul>
 
-        <a href="#contact" class="block w-full bg-accent text-white py-4 rounded-lg text-lg font-semibold hover:bg-orange-500 transition shadow-lg">
-          Start Free Trial
+        <a href="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00" class="block w-full bg-accent text-white py-4 rounded-lg text-lg font-semibold hover:bg-orange-500 transition shadow-lg">
+          Sign Up Now - $25/month
         </a>
-
-        <p class="text-xs text-text-secondary mt-4">No credit card required to start</p>
       </div>
     </div>
   </section>
@@ -219,83 +213,93 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- Service Area -->
-  <section class="py-16 bg-secondary/10">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Serving Paso Robles</h2>
-      <p class="text-lg text-text-secondary mb-4">Currently serving ZIP code <strong>93446</strong></p>
-      <p class="text-text-secondary">Not in our area yet? <a href="#contact" class="text-primary font-semibold underline">Let us know</a> - we're expanding!</p>
+  <!-- Service Area with Map -->
+  <section id="service-area" class="py-16 bg-secondary/10">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-center mb-4">Serving Paso Robles</h2>
+      <p class="text-lg text-text-secondary text-center mb-8">Currently serving ZIP code <strong>93446</strong></p>
+
+      <!-- Map -->
+      <div class="max-w-4xl mx-auto mb-8 rounded-2xl overflow-hidden shadow-lg">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51493.39713498645!2d-120.69987862089845!3d35.62661899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ecf45e5f828187%3A0x7156f5f75cf1a25!2sPaso%20Robles%2C%20CA%2093446!5e0!3m2!1sen!2sus!4v1703800000000!5m2!1sen!2sus"
+          width="100%"
+          height="350"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Dumpster Dudes service area - Paso Robles, CA"
+          class="w-full"
+        ></iframe>
+      </div>
+
+      <p class="text-text-secondary text-center">Not in our area yet? <a href="#contact" class="text-primary font-semibold underline">Let us know</a> - we're expanding!</p>
     </div>
   </section>
 
-  <!-- Contact / Sign Up Form -->
+  <!-- Sign Up / Payment -->
   <section id="contact" class="py-20 bg-primary text-white">
     <div class="container mx-auto px-4 text-center">
       <img src="/favicon.svg" alt="Mascot" class="w-16 h-16 mx-auto mb-6 drop-shadow-lg" />
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Ditch Trash Day?</h2>
-      <p class="text-xl text-gray-200 mb-8">Start your 2-week free trial today. No credit card required.</p>
+      <p class="text-xl text-gray-200 mb-8">Sign up and pay securely with Stripe. Cancel anytime.</p>
 
-      <div class="max-w-md mx-auto bg-background rounded-2xl p-8 shadow-xl">
-        <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+      <!-- Primary: Stripe Payment Button -->
+      <div class="max-w-md mx-auto mb-8">
+        <a
+          href="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00"
+          class="block w-full bg-accent text-white py-5 px-8 rounded-xl text-xl font-bold hover:bg-orange-500 transition shadow-lg"
+        >
+          Subscribe Now - $25/month
+        </a>
+        <p class="text-sm text-gray-300 mt-3">Secure payment via Stripe. Cancel anytime from your account.</p>
+      </div>
+
+      <!-- Divider -->
+      <div class="max-w-md mx-auto flex items-center gap-4 mb-8">
+        <div class="flex-1 h-px bg-white/30"></div>
+        <span class="text-gray-300 text-sm">or have questions?</span>
+        <div class="flex-1 h-px bg-white/30"></div>
+      </div>
+
+      <!-- Secondary: Contact Form -->
+      <div class="max-w-md mx-auto bg-background rounded-2xl p-6 shadow-xl">
+        <h3 class="text-text-primary font-semibold mb-4">Send us a message</h3>
+        <form name="contact" method="POST" data-netlify="true" class="space-y-3">
           <input type="hidden" name="form-name" value="contact" />
 
-          <div>
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-              class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
-            />
-          </div>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
+          />
 
-          <div>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              required
-              class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
-            />
-          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+            class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
+          />
 
-          <div>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
-            />
-          </div>
-
-          <div>
-            <input
-              type="text"
-              name="address"
-              placeholder="Street Address"
-              required
-              class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
-            />
-          </div>
-
-          <div>
-            <textarea
-              name="message"
-              placeholder="Any questions? (Optional)"
-              rows="2"
-              class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
-            ></textarea>
-          </div>
+          <textarea
+            name="message"
+            placeholder="Your question or message"
+            rows="3"
+            required
+            class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 text-text-primary focus:outline-none focus:border-primary transition"
+          ></textarea>
 
           <button
             type="submit"
-            class="w-full bg-accent text-white py-4 rounded-lg text-lg font-bold hover:bg-orange-500 transition shadow-lg"
+            class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 transition"
           >
-            Start My Free Trial →
+            Send Message
           </button>
         </form>
-
-        <p class="text-xs text-text-secondary mt-4">We'll reach out within 24 hours to confirm your service.</p>
       </div>
     </div>
   </section>
