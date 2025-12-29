@@ -5,6 +5,9 @@ interface Props {
 }
 
 const { title, description = "Paso Robles trash can valet service. We take your bins to the curb and bring them back. Just $25/month." } = Astro.props;
+const siteUrl = "https://pasocanrunners.com";
+const siteName = "Paso Can Runners";
+const fullTitle = title === "Home" ? `${siteName} - Trash Can Valet Service in Paso Robles` : `${title} | ${siteName}`;
 ---
 
 <!doctype html>
@@ -12,13 +15,81 @@ const { title, description = "Paso Robles trash can valet service. We take your 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>{fullTitle}</title>
+    <meta name="title" content={fullTitle} />
     <meta name="description" content={description} />
+    <meta name="keywords" content="trash can valet, Paso Robles, trash service, bin service, garbage can service, 93446, curb service, weekly trash pickup" />
+    <meta name="author" content="Paso Can Runners" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={siteUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${siteUrl}/og-image.jpg`} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={siteUrl} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}/og-image.jpg`} />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
     <meta name="theme-color" content="#2D5016" />
     <meta name="msapplication-TileColor" content="#2D5016" />
-    <title>{title} | Paso Can Runners</title>
+
+    <!-- Geo Tags for Local SEO -->
+    <meta name="geo.region" content="US-CA" />
+    <meta name="geo.placename" content="Paso Robles" />
+    <meta name="geo.position" content="35.6266;-120.6910" />
+    <meta name="ICBM" content="35.6266, -120.6910" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Paso Can Runners",
+      "description": "Trash can valet service in Paso Robles, CA. We take your bins to the curb and bring them back every week.",
+      "url": "https://pasocanrunners.com",
+      "telephone": "",
+      "email": "luke@pasocanrunners.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paso Robles",
+        "addressRegion": "CA",
+        "postalCode": "93446",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.6266,
+        "longitude": -120.6910
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Paso Robles",
+        "containedIn": {
+          "@type": "State",
+          "name": "California"
+        }
+      },
+      "priceRange": "$25/month",
+      "openingHours": "Mo-Su",
+      "serviceType": "Trash Can Valet Service",
+      "sameAs": []
+    }
+    </script>
   </head>
   <body class="bg-background text-text-primary">
     <slot />

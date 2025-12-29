@@ -1,0 +1,8 @@
+# Robots.txt for Paso Can Runners
+# https://pasocanrunners.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pasocanrunners.com/sitemap.xml
