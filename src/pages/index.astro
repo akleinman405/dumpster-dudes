@@ -6,7 +6,7 @@ import '../styles/global.css';
 <Layout title="Home">
   <!-- Hero Section with Paso Robles Hills Background -->
   <header class="hero-bg text-white min-h-screen flex flex-col">
-    <nav class="container mx-auto px-4 py-4 flex justify-between items-center relative">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center relative z-50">
       <div class="flex items-center gap-2 sm:gap-3">
         <img src="/favicon.svg" alt="Paso Can Runners mascot" class="w-8 h-8 sm:w-10 sm:h-10" />
         <span class="text-lg sm:text-2xl font-bold">Paso Can Runners</span>
@@ -36,7 +36,7 @@ import '../styles/global.css';
       </button>
 
       <!-- Mobile menu overlay -->
-      <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-primary/95 backdrop-blur-sm shadow-lg md:hidden">
+      <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-primary/95 backdrop-blur-sm shadow-lg md:hidden z-50">
         <div class="flex flex-col p-4 space-y-4">
           <a href="#how-it-works" class="mobile-link py-2 px-4 rounded-lg hover:bg-white/10 transition">How It Works</a>
           <a href="#pricing" class="mobile-link py-2 px-4 rounded-lg hover:bg-white/10 transition">Pricing</a>
@@ -54,12 +54,13 @@ import '../styles/global.css';
         <!-- Mascot above headline -->
         <img src="/favicon.svg" alt="Friendly trash can mascot" class="w-24 h-24 mx-auto mb-6 drop-shadow-lg" />
 
-        <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
-          Never Drag a Trash Can Again.
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg leading-tight">
+          Never Drag a<br class="sm:hidden" /> Trash Can Again.
         </h1>
-        <p class="text-xl md:text-2xl mb-8 text-gray-100 max-w-2xl mx-auto">
-          We take your bins to the curb and bring them back.<br />
-          Rain or shine. Every week. <span class="text-secondary font-bold">Just $25/month.</span>
+        <p class="text-lg sm:text-xl md:text-2xl mb-8 text-gray-100 max-w-2xl mx-auto px-2">
+          We take your bins to the curb<br class="sm:hidden" /> and bring them back.
+          <span class="block sm:inline mt-2 sm:mt-0">Rain or shine. Every week.</span>
+          <span class="block mt-2 text-secondary font-bold">Just $25/month.</span>
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="https://buy.stripe.com/test_00w4gz2cx3Z42Y9erg8AE00" class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-500 transition shadow-lg">
@@ -100,12 +101,12 @@ import '../styles/global.css';
         <div class="text-center p-6 bg-background rounded-2xl shadow-md">
           <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
           <h3 class="text-xl font-semibold mb-2">We Handle It</h3>
-          <p class="text-text-secondary">Evening before: bins to curb.<br/>Morning after: bins back home.</p>
+          <p class="text-text-secondary">Evening before: bins to curb.<br/>Evening after: bins back home.</p>
         </div>
         <div class="text-center p-6 bg-background rounded-2xl shadow-md">
           <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
           <h3 class="text-xl font-semibold mb-2">You Relax</h3>
-          <p class="text-text-secondary">No more early mornings or late nights. We've got you.</p>
+          <p class="text-text-secondary">No more forgetting trash day. We've got you covered.</p>
         </div>
       </div>
     </div>
@@ -163,7 +164,7 @@ import '../styles/global.css';
           </li>
           <li class="flex items-center">
             <span class="text-primary mr-3 text-xl">✓</span>
-            <span>Up to 2 bins included</span>
+            <span>All your bins included</span>
           </li>
           <li class="flex items-center">
             <span class="text-primary mr-3 text-xl">✓</span>

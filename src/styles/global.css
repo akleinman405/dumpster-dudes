@@ -27,10 +27,10 @@ body {
   background-color: var(--color-background);
 }
 
-/* Hero background with subtle dark overlay */
+/* Hero background with darker overlay for better text contrast */
 .hero-bg {
   background-image:
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
     url('/hero-neighborhood.jpg');
   background-size: cover;
   background-position: center;
@@ -42,6 +42,12 @@ body {
   .hero-bg {
     background-attachment: scroll;
   }
+}
+
+/* Hero text shadow for better readability */
+.hero-bg h1,
+.hero-bg p {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Smooth transitions */
