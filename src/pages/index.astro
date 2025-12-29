@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Home">
+  <!-- Hero Section -->
+  <header class="bg-primary text-white">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold">Dumpster Dudes</div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#how-it-works" class="hover:text-secondary transition">How It Works</a>
+        <a href="#pricing" class="hover:text-secondary transition">Pricing</a>
+        <a href="#about" class="hover:text-secondary transition">About</a>
+        <a href="#contact" class="hover:text-secondary transition">Contact</a>
+      </div>
+      <a href="#pricing" class="bg-accent text-white px-4 py-2 rounded-lg font-semibold hover:bg-orange-600 transition">
+        Get Started
+      </a>
+    </nav>
+
+    <div class="container mx-auto px-4 py-20 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Never Drag a Trash Can Again.
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200">
+        We take your bins to the curb and bring them back.<br />
+        Rain or shine. Every week. Just $25/month.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#pricing" class="bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition">
+          Start Your Free Trial
+        </a>
+        <a href="#how-it-works" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="py-20 bg-background-alt">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">How It Works</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="text-xl font-semibold mb-2">Sign Up in 2 Minutes</h3>
+          <p class="text-text-secondary">Enter your address, pick a plan, and you're done. It's that simple.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="text-xl font-semibold mb-2">We Handle Trash Day</h3>
+          <p class="text-text-secondary">Evening before pickup, we take your bins to the curb. Morning after, we bring them back.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="text-xl font-semibold mb-2">You Relax</h3>
+          <p class="text-text-secondary">No more early mornings or late night scrambles. We've got you covered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
+      <p class="text-xl text-text-secondary mb-12">No contracts. Cancel anytime. 2-week free trial.</p>
+
+      <div class="max-w-md mx-auto bg-white rounded-2xl shadow-xl p-8 border-2 border-primary">
+        <div class="text-5xl font-bold text-primary mb-2">$25</div>
+        <div class="text-text-secondary mb-6">per month</div>
+        <ul class="text-left space-y-3 mb-8">
+          <li class="flex items-center">
+            <span class="text-secondary mr-2">✓</span> Weekly service
+          </li>
+          <li class="flex items-center">
+            <span class="text-secondary mr-2">✓</span> Up to 2 bins
+          </li>
+          <li class="flex items-center">
+            <span class="text-secondary mr-2">✓</span> Text notifications
+          </li>
+          <li class="flex items-center">
+            <span class="text-secondary mr-2">✓</span> Cancel anytime
+          </li>
+        </ul>
+        <a href="#contact" class="block w-full bg-accent text-white py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition">
+          Start Free Trial
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-background-alt">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8">Meet Luke</h2>
+        <div class="bg-white rounded-2xl p-8 shadow-lg">
+          <div class="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-6 flex items-center justify-center text-text-secondary">
+            Photo Coming Soon
+          </div>
+          <p class="text-lg text-text-secondary mb-4">
+            Hi, I'm Luke - a cross country runner here in Paso Robles. I started Dumpster Dudes to fund my running dreams (gear, races, and training camps aren't cheap!).
+          </p>
+          <p class="text-lg text-text-secondary mb-4">
+            Turns out, all those miles made me pretty fast at getting your trash cans to the curb too.
+          </p>
+          <p class="text-lg text-text-secondary">
+            I'm proud to serve my neighbors here in Paso Robles. Thanks for supporting a local student athlete!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area -->
+  <section class="py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Serving Paso Robles</h2>
+      <p class="text-xl text-text-secondary mb-8">Currently serving ZIP code 93446</p>
+      <p class="text-text-secondary">Not in our area? <a href="#contact" class="text-primary underline">Let us know</a> - we're expanding!</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-primary text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+      <p class="text-xl text-gray-200 mb-8">Contact Luke to sign up for your free trial.</p>
+      <div class="max-w-md mx-auto bg-white rounded-2xl p-8">
+        <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+          <input type="hidden" name="form-name" value="contact" />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 text-text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 text-text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+          <input
+            type="text"
+            name="address"
+            placeholder="Street Address"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 text-text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+          <textarea
+            name="message"
+            placeholder="Any questions or comments?"
+            rows="3"
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 text-text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+          ></textarea>
+          <button
+            type="submit"
+            class="w-full bg-accent text-white py-4 rounded-lg text-lg font-semibold hover:bg-orange-600 transition"
+          >
+            Start My Free Trial
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <div class="text-2xl font-bold mb-4">Dumpster Dudes</div>
+      <p class="text-gray-400 mb-4">Trash can valet service for Paso Robles, CA</p>
+      <p class="text-gray-500 text-sm">© 2025 Dumpster Dudes. All rights reserved.</p>
+    </div>
+  </footer>
+</Layout>
