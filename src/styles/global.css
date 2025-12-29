@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Dumpster Dudes Brand Colors - Paso Robles Inspired */
+/* Paso Can Runners Brand Colors - Paso Robles Inspired */
 @theme {
   /* Option A: Warm Earth Tones (Paso Robles Golden Hills) */
   --color-primary: #2D5016;      /* Deep forest green - eco-friendly */
@@ -35,6 +35,13 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+/* Mobile: disable fixed background (causes issues on iOS) */
+@media (max-width: 768px) {
+  .hero-bg {
+    background-attachment: scroll;
+  }
 }
 
 /* Smooth transitions */

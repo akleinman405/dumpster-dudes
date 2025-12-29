@@ -4,17 +4,21 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Trash can valet service in Paso Robles. We take your bins to the curb and bring them back. Just $25/month." } = Astro.props;
+const { title, description = "Paso Robles trash can valet service. We take your bins to the curb and bring them back. Just $25/month." } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title} | Dumpster Dudes</title>
+    <link rel="shortcut icon" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+    <meta name="theme-color" content="#2D5016" />
+    <meta name="msapplication-TileColor" content="#2D5016" />
+    <title>{title} | Paso Can Runners</title>
   </head>
   <body class="bg-background text-text-primary">
     <slot />
